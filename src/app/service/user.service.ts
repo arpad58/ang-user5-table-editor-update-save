@@ -29,7 +29,7 @@ export class UserService {
     return this.http.post<User>(`${this.serverAddress}`, user);
   }
 
-  /* editor update */
+  /* editor create update */
   updateUser(user: User): Observable<User> {
     return this.http.patch<User>(`${this.serverAddress}/${user.id}`, user);
   }

@@ -25,14 +25,15 @@ export class UserEditorComponent implements OnInit {
 
 
   constructor(
-    private userService: UserService,
-    private activatedRoute: ActivatedRoute,
-    private router: Router
+    private userService: UserService,           /* editor */
+    private activatedRoute: ActivatedRoute,     /* editor */
+    private router: Router                      /* update  create */
   ) { }
 
   ngOnInit(): void {
   }
 
+  /* update  create */
   onSubmit(form: NgForm, user: User): void {
     try {
       if (user.id == 0) {

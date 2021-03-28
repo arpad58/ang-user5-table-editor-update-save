@@ -3,9 +3,15 @@
 <!-- table -->
 <div class="container">
   <div class="row">
-    <div class="col-12">
+    <div class="col-10 offset-1">
       <h2>User List</h2>
-      <table class="table">
+      <!-- create new user -->
+      <div class="">
+        <button [routerLink]="['user/' + 0]" class="btn btn-primary btn-block my-3">
+          <i class="fa fa-plus"></i>
+        </button>
+      </div>
+      <table class="table table-striped">
         <thead>
           <tr> <!-- table -->
             <th>#</th>
@@ -13,6 +19,7 @@
             <th>Email</th>
             <th>Address</th>
             <th>Active</th>
+            <th></th>
           </tr>
         </thead>
         <tbody> <!-- table                      -->
