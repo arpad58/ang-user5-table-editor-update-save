@@ -7,7 +7,7 @@
       <h2>User List</h2>
       <table class="table">
         <thead>
-          <tr>
+          <tr> <!-- table -->
             <th>#</th>
             <th>Name</th>
             <th>Email</th>
@@ -15,13 +15,14 @@
             <th>Active</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tbody> <!-- table                      -->
+          <tr *ngFor="let user of userList$ | async">
+                <!-- table -->
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.address}}</td>
+            <td>{{user.active}}</td>
           </tr>
         </tbody>
       </table>
