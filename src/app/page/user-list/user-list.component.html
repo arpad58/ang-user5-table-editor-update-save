@@ -23,6 +23,15 @@
             <td>{{user.email}}</td>
             <td>{{user.address}}</td>
             <td>{{user.active}}</td>
+            <!-- editor button  -->
+            <td>
+              <div class="btn-group">
+                <button [routerLink]="['user/' + user.id]" class="btn btn-info">
+                  <i class="fa fa-pencil"></i>
+                </button>
+
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
